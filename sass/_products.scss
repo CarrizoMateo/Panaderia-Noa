@@ -1,0 +1,58 @@
+/* products */
+.products {
+  grid-area: products;
+  grid-column: 1/5;
+  grid-row: 3/4;
+  border-top: 1px solid $secondary-color;
+}
+.products h3 {
+  font-family: "Oswald", sans-serif;
+  font-size: 60px;
+  text-align: center;
+  margin-top: 100px;
+  color: $secondary-color;
+}
+.products p {
+  font-family: sans-serif;
+  font-size: 20px;
+  text-align: center;
+  margin-top: 20px;
+  color: $secondary-color;
+  line-height: 2;
+  padding: 30px 250px 40px 250px;
+}
+.row-products {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.button-products {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+.products button {
+  background-color: $secondary-color;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  margin: 50px 0;
+  display: flex;
+}
+.products button a {
+  text-decoration: none;
+  color: $primary-color;
+  font-family: "Oswald", sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  padding: 10px 20px;
+}
+.product-item h4 {
+  font-family: "Oswald", sans-serif;
+  font-size: 40px;
+  text-align: center;
+  color: $secondary-color;
+}

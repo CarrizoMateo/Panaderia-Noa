@@ -1,3 +1,12 @@
+@import 'header';
+@import 'hero';
+@import 'qs';
+@import 'products';
+@import 'tcn';
+@import 'contact';
+@import 'footer';
+@import 'grid';
+
 $primary-color: #5c3712;
 $secondary-color: #ffffff;
 
@@ -7,7 +16,7 @@ $secondary-color: #ffffff;
   box-sizing: border-box;
 }
 body {
-  background-color: $primary-color; 
+  background-color: $primary-color;
 }
 /* HEADER */
 header {
@@ -22,15 +31,15 @@ header .logo {
   margin: 20px;
 }
 header nav {
-  margin-right: 70px;
+  margin-right: 100px;
   width: 100%;
-  gap: 25px;
+  gap: 40px;
   display: flex;
   justify-content: end;
   align-items: center;
 }
 li {
-  font-family: "Oswald", sans-serif;;
+  font-family: "Oswald", sans-serif;
   list-style: none;
   font-size: 17px;
 }
@@ -53,7 +62,7 @@ h3 {
 }
 /* hero */
 .hero {
-  background: url("../assets/img\ -\ fondo\ hero.png") center ;
+  background: url("../assets/img\ -\ fondo\ hero.png") center;
   background-color: rgba(0, 0, 0, 0.4);
   grid-area: hero;
   grid-column: 1/5;
@@ -193,7 +202,7 @@ h3 {
   padding: 30px;
   border-radius: 12px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  font-family: 'Segoe UI', sans-serif;
+  font-family: "Segoe UI", sans-serif;
 }
 .formulario-contacto h2 {
   text-align: center;
@@ -259,17 +268,17 @@ h3 {
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
-  margin: 80px ;
+  margin: 80px;
 }
 .rrss-item h4 {
   font-family: "Oswald", sans-serif;
   font-size: 40px;
   text-align: center;
-  color: $secondary-color;  
+  color: $secondary-color;
 }
 /* FOOTER */
 footer {
-  background-color: $primary-color;
+  background-color: #3b230c;
   color: $secondary-color;
   text-align: center;
   padding: 20px;
@@ -279,10 +288,10 @@ footer {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(5, auto);
-  grid-template-areas: 
-  "hero hero hero hero"
-  "quienes-somos queines-somos queines-somos queines-somos"
-  "products products products products"
-  "tcn tcn tcn tcn"
-  "contacto contacto contacto contacto";
+  grid-template-areas:
+    "hero hero hero hero"
+    "quienes-somos queines-somos queines-somos queines-somos"
+    "products products products products"
+    "tcn tcn tcn tcn"
+    "contacto contacto contacto contacto";
 }

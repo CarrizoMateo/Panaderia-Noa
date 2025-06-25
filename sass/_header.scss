@@ -1,0 +1,28 @@
+header {
+  background-color: $primary-color;
+  color: $secondary-color;
+  display: flex;
+  justify-content: space-between;
+}
+header .logo {
+  width: 115px;
+  height: 115px;
+  margin: 20px;
+}
+header nav {
+  margin-right: 100px;
+  width: 100%;
+  gap: 40px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+li {
+  font-family: "Oswald", sans-serif;
+  list-style: none;
+  font-size: 17px;
+}
+a {
+  text-decoration: none;
+  color: $secondary-color;
+}

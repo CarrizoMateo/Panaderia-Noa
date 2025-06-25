@@ -1,0 +1,70 @@
+/* trabaja con nosotros */
+.trabaja-con-nosotros {
+  grid-area: tcn;
+  grid-column: 1/5;
+  grid-row: 4/5;
+  border-top: 1px solid $secondary-color;
+}
+.trabaja-con-nosotros h3 {
+  font-family: "Oswald", sans-serif;
+  font-size: 60px;
+  text-align: center;
+  margin-top: 100px;
+  color: $secondary-color;
+}
+.trabaja-con-nosotros p {
+  font-family: sans-serif;
+  font-size: 20px;
+  text-align: center;
+  margin-top: 20px;
+  color: $secondary-color;
+  line-height: 2;
+  padding: 30px 250px 40px 250px;
+}
+.mail {
+  font-family: "Caprasimo", serif;
+}
+.formulario-contacto {
+  background-color: #fffaf0;
+  max-width: 500px;
+  margin: 0 auto 40px auto;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  font-family: "Segoe UI", sans-serif;
+}
+.formulario-contacto h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #8b4513;
+}
+.formulario-contacto input,
+.formulario-contacto textarea {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: border 0.3s ease;
+}
+.formulario-contacto input:focus,
+.formulario-contacto textarea:focus {
+  border-color: #d2691e;
+  outline: none;
+}
+.formulario-contacto button {
+  background-color: #d2691e;
+  color: $secondary-color;
+  border: none;
+  padding: 12px 25px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  width: 100%;
+}
+.formulario-contacto button:hover {
+  background-color: #b15312;
+}

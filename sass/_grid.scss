@@ -1,0 +1,12 @@
+/* GRID */
+.grid-main {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, auto);
+    grid-template-areas:
+    "hero hero hero hero"
+    "quienes-somos queines-somos queines-somos queines-somos"
+    "products products products products"
+    "tcn tcn tcn tcn"
+    "contacto contacto contacto contacto";
+}
