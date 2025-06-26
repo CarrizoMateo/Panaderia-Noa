@@ -1,14 +1,7 @@
-@import 'header';
-@import 'hero';
-@import 'qs';
-@import 'products';
-@import 'tcn';
-@import 'contact';
-@import 'footer';
-@import 'grid';
-
 $primary-color: #5c3712;
 $secondary-color: #ffffff;
+$titles: 'Oswald', sans-serif;
+$text: 'Open Sans', sans-serif;
 
 * {
   margin: 0;
@@ -47,6 +40,9 @@ a {
   text-decoration: none;
   color: $secondary-color;
 }
+header nav li a:hover {
+  text-decoration: underline;
+}
 /* MAIN */
 h2 {
   font-family: "Oswald", sans-serif;
@@ -59,6 +55,35 @@ h3 {
   font-size: 20px;
   text-align: center;
   margin-top: 10px;
+}
+/* whatsapp floating */
+.whatsapp-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+.whatsapp-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background-color: #25d366;
+  border-radius: 50%;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  transition: transform 0.3s ease;
+}
+.whatsapp-button:hover {
+  transform: scale(1.1);
+}
+.whatsapp-floating {
+  width: 28px;
+  height: 28px;
 }
 /* hero */
 .hero {
@@ -105,11 +130,11 @@ h3 {
 .quienes-somos p {
   font-family: sans-serif;
   font-size: 20px;
-  text-align: center;
+  text-align: justify;
   margin-top: 20px;
   color: $secondary-color;
   line-height: 3;
-  padding: 30px 400px 40px 400px;
+  padding: 30px 400px 80px 400px;
 }
 /* products */
 .products {
@@ -155,6 +180,9 @@ h3 {
   margin: 50px 0;
   display: flex;
 }
+.products button:hover {
+  background-color: #3b230c;
+}
 .products button a {
   text-decoration: none;
   color: $primary-color;
@@ -162,6 +190,9 @@ h3 {
   font-weight: bold;
   font-size: 20px;
   padding: 10px 20px;
+}
+.products button a:hover {
+  color: $secondary-color;
 }
 .product-item h4 {
   font-family: "Oswald", sans-serif;
@@ -270,11 +301,18 @@ h3 {
   flex-wrap: wrap;
   margin: 80px;
 }
+.rrss-item:hover {
+  transform: scale(1.1); 
+}
 .rrss-item h4 {
   font-family: "Oswald", sans-serif;
   font-size: 40px;
   text-align: center;
   color: $secondary-color;
+}
+.rrss-item a svg {
+  width: 200px;
+  height: 200px;
 }
 /* FOOTER */
 footer {
@@ -295,3 +333,303 @@ footer {
     "tcn tcn tcn tcn"
     "contacto contacto contacto contacto";
 }
+
+/* Celulares pequeños (vertical) */
+@media (min-width: 320px) and (max-width: 479px) { 
+  header nav {
+    margin: 30px 0;
+    gap: 10px;
+    flex-direction: column;
+  }
+  
+  .hero h2 {
+    font-size: 30px;
+  }
+  
+  .text-hero {
+    margin: 0 40px;
+  }
+
+  .quienes-somos p,
+  .products p,
+  .trabaja-con-nosotros p,
+  .contact p {
+    padding: 20px;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  
+  .product-item img {
+    width: 175px;
+    height: 175px;
+  }
+
+  .product-item h4 {
+    font-size: 25px;
+  }
+
+  .formulario-contacto {
+    padding: 15px;
+    max-width: 90%;
+  }
+  
+  .rrss {
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+  }
+  
+  .rrss-item {
+    margin-bottom: 50px;
+  }
+
+  .rrss-item a svg {
+    width: 100px;
+    height: 100px;
+    text-align: center;
+  }
+
+  .rrss-item h4 {
+    font-size: 25px;
+  }
+}
+@media (min-width: 479px) and (max-width: 630px) { 
+  header nav {
+    flex-direction: column;
+    margin: 30px 0;
+  }
+}
+@media (min-width: 480px) and (max-width: 767px) { 
+  header nav {
+    margin-right: 20px;
+    gap: 15px;
+  }
+  
+  .hero h2 {
+    font-size: 40px;
+  }
+  
+  .quienes-somos p,
+  .products p,
+  .trabaja-con-nosotros p,
+  .contact p {
+    padding: 30px 20px;
+    font-size: 16px;
+  }
+  
+  .formulario-contacto {
+    padding: 20px;
+    max-width: 90%;
+  }
+  
+  .rrss {
+    flex-direction: column;
+    align-items: center;
+    margin: 40px;
+  }
+  
+  .rrss-item {
+    margin-bottom: 20px;
+  }
+}
+
+/* Celulares estándar */
+@media (min-width: 768px) and (max-width: 1023px) { 
+  header nav {
+    margin-right: 40px;
+    gap: 30px;
+  }
+  
+  .hero h2 {
+    font-size: 60px;
+  }
+  
+  .quienes-somos p,
+  .products p,
+  .trabaja-con-nosotros p,
+  .contact p {
+    padding: 30px 40px;
+    font-size: 18px;
+  }
+  
+  .product-item img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .product-item h4 {
+    font-size: 30px;
+  }
+
+  .formulario-contacto {
+    padding: 25px;
+    max-width: 80%;
+  }
+  
+  .rrss {
+    align-items: center;
+    margin: 60px;
+  }
+  
+  .rrss-item {
+    margin-bottom: 30px;
+  }
+
+  .rrss-item a svg {
+    width: 90px;
+    height: 90px;
+    text-align: center;
+  }
+  .rrss-item h4 {
+    font-size: 20px;
+  }
+}
+/* Tablets */
+@media (min-width: 1024px) and (max-width: 1279px) {
+  header nav {
+    margin-right: 40px;
+    gap: 35px;
+  }
+  
+  .hero h2 {
+    font-size: 70px;
+  }
+  .text-hero {
+    margin: 0 50px;
+  }
+  
+  .quienes-somos p,
+  .products p,
+  .trabaja-con-nosotros p,
+  .contact p {
+    padding: 30px 60px;
+    font-size: 20px;
+  }
+  .product-item img {
+    width: 250px;
+    height: 25  0px;
+  }
+  .product-item h4 {
+    font-size: 30px;
+  } 
+  .formulario-contacto {
+    padding: 30px;
+    max-width: 70%;
+  }
+  
+  .rrss {
+    flex-direction: row;
+    justify-content: center;
+    margin: 80px 20px;
+  }
+  
+  .rrss-item {
+    margin: 0 40px;
+  }
+  
+  .rrss a svg {
+    width: 100px;
+    height: 100px;
+    text-align: center;
+  }
+
+  .rrss-item h4 {
+    font-size: 25px;
+  }
+}
+
+/* Laptops */
+@media (min-width: 1280px) and (max-width: 1280px) {
+  header nav {
+    margin-right: 50px;
+    gap: 40px;
+  }
+  
+  .hero h2 {
+    font-size: 75px;
+  }
+  
+  .quienes-somos p {
+    padding: 30px 80px 90px 80px;
+    font-size: 22px;
+    line-height: 2;
+  }
+  .products p,
+  .trabaja-con-nosotros p,
+  .contact p {
+    padding: 30px 80px;
+    font-size: 22px;
+  }
+  
+  .product-item img {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .product-item h4 {
+    font-size: 30px;
+  }
+  .formulario-contacto {
+    padding: 35px;
+    max-width: 60%;
+  }
+  
+  .rrss {
+    flex-direction: row;
+    justify-content: center;
+    margin: 80px 20px;
+  }
+  
+  svg {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .rrss-item {
+    margin: 0 30px;
+  }
+
+  .rrss-item h4 {
+    font-size: 30px;
+  }
+}
+
+/* Escritorio grande */
+@media (min-width: 1281px) {
+  header nav {
+    margin-right: 100px;
+    gap: 50px;
+  }
+  
+  .hero h2 {
+    font-size: 80px;
+  }
+  
+  .quienes-somos p,
+  .products p,
+  .trabaja-con-nosotros p,
+  .contact p {
+    padding: 30px 100px;
+    font-size: 24px;
+  }
+  .product-item img {
+    width: 300px;
+    height: 300px;
+  }
+
+  .formulario-contacto {
+    padding: 40px;
+    max-width: 50%;
+  }
+  
+  .rrss {
+    flex-direction: row;
+    justify-content: center;
+    margin: 120px;
+  }
+  
+  .rrss-item {
+    margin: 0 40px;
+  }
+}
+
