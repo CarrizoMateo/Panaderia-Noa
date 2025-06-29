@@ -22,6 +22,50 @@
   line-height: 2;
   padding: 30px 250px 40px 250px;
 }
+.formulario-contacto {
+  background-color: #fffaf0;
+  max-width: 500px;
+  margin: 0 auto 40px auto;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  font-family: "Segoe UI", sans-serif;
+}
+.formulario-contacto h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #8b4513;
+}
+.formulario-contacto input,
+.formulario-contacto textarea {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: border 0.3s ease;
+}
+.formulario-contacto input:focus,
+.formulario-contacto textarea:focus {
+  border-color: #d2691e;
+  outline: none;
+}
+.formulario-contacto button {
+  background-color: #d2691e;
+  color: $secondary-color;
+  border: none;
+  padding: 12px 25px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  width: 100%;
+}
+.formulario-contacto button:hover {
+  background-color: #b15312;
+}
 .rrss {
   display: flex;
   justify-content: space-around;
