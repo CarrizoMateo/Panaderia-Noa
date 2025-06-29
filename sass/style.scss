@@ -131,10 +131,9 @@ h3 {
   font-family: sans-serif;
   font-size: 20px;
   text-align: justify;
-  margin-top: 20px;
+  margin: 20px 50px 60px;
   color: $secondary-color;
   line-height: 3;
-  padding: 30px 400px 80px 400px;
 }
 /* products */
 .products {
@@ -259,7 +258,7 @@ h3 {
 }
 .formulario-contacto {
   background-color: #fffaf0;
-  max-width: 500px;
+  width: 600px;
   margin: 0 auto 40px auto;
   padding: 30px;
   border-radius: 12px;
